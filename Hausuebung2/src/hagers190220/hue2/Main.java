@@ -6,13 +6,20 @@ public class Main {
 
         NumberTester numberTester = new NumberTester("file.txt");
 
-        numberTester.oddTest = (n) -> {
+        numberTester.setOddEvenTester((n) -> {
             return n % 2 == 0;
-        };
-        numberTester.primeTester = (n) -> {
+        });
+        numberTester.setPrimeTester((n) -> {
 
-        };
-        numberTester.palindromeTester = (n) -> {
+            for (int i = 2; i <= 9; i++) {
+                if(n % i == 0 && n != i){
+                    return false;
+                }
+            }
+            return false;
+
+        });
+        numberTester.setPalindromeTester((n) -> {
             String length = String.valueOf(n);
             int counter = 0;
             int l = length.length();
@@ -23,7 +30,7 @@ public class Main {
                 }
             }
             return counter == length.length();
-        };
+        });
 
         numberTester.testFile();
     }

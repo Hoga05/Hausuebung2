@@ -47,11 +47,11 @@ public class NumberTester {
                 int zahl2 = Integer.parseInt(teile[1]);
 
                 switch(zahl1){
-                    case 1: oddTest.testNumber();
+                    case 1: oddTest.testNumber(zahl2);
                         break;
-                    case 2: setPrimeTester(primeTester);
+                    case 2: primeTester.testNumber(zahl2);
                         break;
-                    case 3: setPrimeTester(palindromeTester);
+                    case 3: palindromeTester.testNumber(zahl2);
                         break;
                 }
 
