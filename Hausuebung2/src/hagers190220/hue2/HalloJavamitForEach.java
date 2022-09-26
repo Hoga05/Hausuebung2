@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class HalloJavamitForEach {
-    public HalloJavamitForEach() {
+    public HalloJavamitForEach(String s1, String s2, String s3) {
         List<String> list = new ArrayList<>();
 
-        list.add("Hallo");
-        list.add("Welt");
-        list.add("Test123");
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
 
         for (String s : list) {
             System.out.println(s);
