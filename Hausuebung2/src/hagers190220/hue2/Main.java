@@ -9,9 +9,9 @@ public class Main {
         numberTester.oddTest = (n) -> {
             return n % 2 == 0;
         };
-        /*numberTester.primeTester = (n) -> {
+        numberTester.primeTester = (n) -> {
 
-        };*/
+        };
         numberTester.palindromeTester = (n) -> {
             String length = String.valueOf(n);
             int counter = 0;
