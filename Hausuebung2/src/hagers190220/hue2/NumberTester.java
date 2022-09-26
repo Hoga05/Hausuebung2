@@ -47,11 +47,23 @@ public class NumberTester {
                 int zahl2 = Integer.parseInt(teile[1]);
 
                 switch(zahl1){
-                    case 1: oddTest.testNumber(zahl2);
+                    case 1: if(oddTest.testNumber(zahl2)){
+                        System.out.println("EVEN");
+                    }else{
+                        System.out.println("NOT EVEN");
+                    }
                         break;
-                    case 2: primeTester.testNumber(zahl2);
+                    case 2: if(primeTester.testNumber(zahl2)){
+                        System.out.println("PRIME");
+                    }else{
+                        System.out.println("NO PRIME");
+                    }
                         break;
-                    case 3: palindromeTester.testNumber(zahl2);
+                    case 3: if(palindromeTester.testNumber(zahl2)){
+                        System.out.println("PALINDROME");
+                    }else{
+                        System.out.println("NO PALINDROME");
+                    }
                         break;
                 }
 

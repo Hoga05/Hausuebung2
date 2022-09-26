@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
         HalloJavamitForEach test1 = new HalloJavamitForEach("hallo","welt","test");
 
+        System.out.println("------------");
+
         NumberTester numberTester = new NumberTester("file.txt");
 
         numberTester.setOddEvenTester((n) -> {
@@ -16,20 +18,16 @@ public class Main {
                     return false;
                 }
             }
-            return false;
+            return true;
 
         });
         numberTester.setPalindromeTester((n) -> {
-            String length = String.valueOf(n);
-            int counter = 0;
-            int l = length.length();
-            for (int i = 0; i < length.length(); i++) {
-                if(length.charAt(0) == (length.charAt(l-1))){
-                    l--;
-                    counter++;
-                }
-            }
-            return counter == length.length();
+            String s1 = n+"";
+            String s2 = n+"";
+            StringBuilder sb = new StringBuilder(s2);
+            sb.reverse();
+            s2 = sb.toString();
+            return s1.equals(s2);
         });
 
         numberTester.testFile();
