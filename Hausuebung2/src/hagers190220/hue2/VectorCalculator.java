@@ -7,21 +7,21 @@ public class VectorCalculator extends AbstractCalculator{
 
     @Override
     public Number add(Number x, Number y) {
-        return null;
+        return new Number(x.getA()+y.getA(), x.getB()+y.getB());
     }
 
     @Override
     public Number subt(Number x, Number y) {
-        return null;
+        return new Number(x.getA()-y.getA(), x.getB()-y.getB());
     }
 
     @Override
     public Number mult(Number x, Number y) {
-        return null;
+        return new Number(x.getA()*y.getA(), x.getB()*y.getB());
     }
 
     @Override
     public Number divi(Number x, Number y) {
-        return null;
+        return new Number(x.getA()/y.getA(), x.getB() / y.getB());
     }
 }
